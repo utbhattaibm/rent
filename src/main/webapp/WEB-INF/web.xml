@@ -4,4 +4,17 @@
 
 <web-app>
   <display-name>Archetype Created Web Application for Car Rental.</display-name>
+  <servlet> 
+      <servlet-name>Jersey RESTful Application</servlet-name> 
+     <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class> 
+      <init-param> 
+         <param-name>jersey.config.server.provider.packages</param-name> 
+         <param-value>com.carservice.rent</param-value> 
+      </init-param> 
+      <load-on-startup>1</load-on-startup>
+   </servlet> 
+   <servlet-mapping> 
+      <servlet-name>Jersey RESTful Application</servlet-name> 
+      <url-pattern>/carRentRest/*</url-pattern> 
+   </servlet-mapping> 
 </web-app>
